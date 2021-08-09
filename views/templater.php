@@ -1,10 +1,3 @@
-<?php 
-session_start();
-$url = urlFrontendCtr::obtenerUrlFrontendCtr();
-
-?>
-
-
 <!doctype html>
 <html lang="es">
   <head>
@@ -17,6 +10,11 @@ $url = urlFrontendCtr::obtenerUrlFrontendCtr();
 
     <title>Administrador de tareas</title>
   </head>
+  <?php 
+session_start();
+$url = urlFrontendCtr::obtenerUrlFrontendCtr();
+
+?>
   <body>
 
 
@@ -61,7 +59,7 @@ $url = urlFrontendCtr::obtenerUrlFrontendCtr();
 
 
 
-<script src="<?php echo $url;?>views/js/eliminartareas.js"></script>
+
 
 
 

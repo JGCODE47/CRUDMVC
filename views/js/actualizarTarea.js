@@ -1,5 +1,5 @@
 'use strict';
-window.onload = function(){
+window.addEventListener("load", function(){
     const actualizar = document.querySelectorAll("#idActualizar");  
     actualizar.forEach(up => {
         up.addEventListener("click", (e) => {
@@ -32,7 +32,7 @@ window.onload = function(){
         })
     })
 
-};
+}) 
    
 
     
