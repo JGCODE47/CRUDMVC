@@ -10,4 +10,5 @@
 #este proyecto es una muestra gratis del paradigma orientado objetos, ajax, y el modelo vista controlador 
 
 #usuario: root
+
 #pass: root
