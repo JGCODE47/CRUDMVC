@@ -2,6 +2,7 @@
 /*                                  variables                                 */
 /* -------------------------------------------------------------------------- */
 const verTareas = document.querySelector("#verTareas");
+const iduser = document.querySelector("#idU")
 
 
 
@@ -11,6 +12,8 @@ const verTareas = document.querySelector("#verTareas");
 /*                             ajax llamar tareas                             */
 /* -------------------------------------------------------------------------- */
 const ajaxVerTarea = new XMLHttpRequest(); 
+const date = new FormData();
+date.append("id_user", iduser.getAttribute("iduser"))
 ajaxVerTarea.open("POST", "ajax/verTarea.php"); 
 ajaxVerTarea.onreadystatechange = function() {//Call a function when the state changes.
     if(ajaxVerTarea.readyState == 4 && ajaxVerTarea.status == 200) {
@@ -25,7 +28,7 @@ ajaxVerTarea.onreadystatechange = function() {//Call a function when the state c
                 '</div>'+
                 '<div class="card-body">'+
                     '<p>'+
-                    '<form>'+
+                    '<form method="post">'+
                     '<div class="mb-3">'+
                         '<label for="exampleInputEmail1" class="form-label">Nombre tarea</label>'+
                         '<input type="text" class="form-control" id="nombretU" value="'+val.nombre+'" aria-describedby="emailHelp">'+
@@ -43,9 +46,9 @@ ajaxVerTarea.onreadystatechange = function() {//Call a function when the state c
                         '<input type="date" class="form-control" id="fechatU" value="'+val.fecha+'" aria-describedby="emailHelp">'+
                     '</div>'+
 
-                    '<button class="btn btn-primary" id="idActualizar" >Actualizar</button>'+
+                    '<button type="submit" class="btn btn-primary" id="idActualizar" idActualizar="'+val.id_tareas+'">Actualizar</button>'+
                     ' '+
-                    '<button  class="btn btn-danger" idEliminar="'+val.id_tareas+'" id="eliminar" >Eliminar</button>'+
+                    '<button type="submit" class="btn btn-danger" idEliminar="'+val.id_tareas+'" id="eliminar" >Eliminar</button>'+
                     '</form>'+                   
                 '</p> '+                   
                 '</div>'+
@@ -64,7 +67,7 @@ ajaxVerTarea.onreadystatechange = function() {//Call a function when the state c
     }
 }
 }
-ajaxVerTarea.send();
+ajaxVerTarea.send(date);
 
 
 

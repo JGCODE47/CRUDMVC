@@ -8,7 +8,7 @@
                 </div>
                 <div class="card-body">
                     <p>
-                    <form action="post">
+                    <form method="POST">
                     <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Nombre tarea</label>
                         <input type="email" class="form-control" id="nombret" aria-describedby="emailHelp">
@@ -26,7 +26,7 @@
                         <input type="date" class="form-control" id="fechat" aria-describedby="emailHelp">
                     </div>
 
-                    <button type="submit" class="btn btn-primary" id="creartarea">Crear</button>
+                    <button type="submit" class="btn btn-primary" id="creartarea" idUser="<?php echo $_SESSION["id"];?>">Crear</button>
                     </form>                    
                 </p>                    
                 </div>

@@ -16,6 +16,7 @@ crear.addEventListener("click", (e)=>{
         datos.append("nombre", nombreTarea.value);
         datos.append("descripcion", descripcionTarea.value);
         datos.append("fecha", fecha.value);
+        datos.append("id_tarea", crear.getAttribute("idUser"))
         ajaxCreaTarea.onreadystatechange = function() {//Call a function when the state changes.
             if(ajaxCreaTarea.readyState == 4 && ajaxCreaTarea.status == 200) {
             if(JSON.parse(ajaxCreaTarea.responseText) == "ok"){

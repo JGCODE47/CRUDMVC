@@ -2,14 +2,14 @@
 include '../controllers/crud.php';
 include '../models/crud.php';
 class ajaxTarea{
-    public static function ajaxCrearTarea(){
+    public static function ajaxupdateTarea(){
         $date = array("nombre"=>$_POST["nombre"], "descripcion"=>$_POST["descripcion"], 
-                      "fecha"=>$_POST["fecha"], "idUser"=>$_POST["id_tarea"]);
-        $create = tareas::crearTareaCtr($date);
+                      "fecha"=>$_POST["fecha"], "id_tarea"=>$_POST["id_tarea"]);
+        $create = tareas::actualizarTareaCtr($date);
         return json_encode($create);
     }
 }
 
-$e = ajaxTarea::ajaxCrearTarea();
+$e = ajaxTarea::ajaxupdateTarea();
 
 echo $e;

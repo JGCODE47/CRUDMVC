@@ -9,6 +9,10 @@ class rutesMdl{
             return "views/modules/crear.php";        
         }elseif($rute[0] == "ver"){        
             return "views/modules/ver.php";        
+        }elseif($rute[0] == "login"){        
+            return "views/modules/login.php";        
+        }elseif($rute[0] == "salir"){        
+            return "views/modules/salir.php";        
         }else{
             return "views/modules/404.php";
         }

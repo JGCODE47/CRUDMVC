@@ -8,9 +8,9 @@ class tareas{
         return $create;
     }
 
-    public static function leerTareaCtr(){
+    public static function leerTareaCtr($id){
         $table="tareas";
-        $read = tareaMdl::leerTareaMdl($table);
+        $read = tareaMdl::leerTareaMdl($table, $id);
         return $read;
     }
 
@@ -22,9 +22,9 @@ class tareas{
 
     }
 
-    public static function eliminarTareaCtr(){
+    public static function eliminarTareaCtr($id){
         $table="tareas";
-        $delete = tareaMdl::eliminarTareaMdl($table, $date);
+        $delete = tareaMdl::eliminarTareaMdl($table, $id);
         return $delete;
     }
 }
