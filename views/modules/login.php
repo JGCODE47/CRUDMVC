@@ -28,7 +28,7 @@
                         <?php 
                             if(isset($_POST["user"])){
                                 $lg = new LoginCtr();
-                            $lg->ComprobarLoginCtr();
+                                $lg->ComprobarLoginCtr();
                             }
                         
                         

@@ -4,7 +4,7 @@ class rutesMdl{
     public static function rutesFrontendMdl($rutes){
         $rute = explode("/", $rutes);
         if($rute[0] == "index"){
-            return "views/modules/inicio.php";
+            return "views/modules/login.php";
         }elseif($rute[0] == "crear"){        
             return "views/modules/crear.php";        
         }elseif($rute[0] == "ver"){        
